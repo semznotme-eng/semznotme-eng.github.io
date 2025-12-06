@@ -240,16 +240,9 @@ function downloadHTML(){
   const head = document.querySelector('head').innerHTML;
   const body = document.querySelector('body').innerHTML;
   const doc = `<!doctype html><html lang="id"><head>${head}</head><body>${body}<script>/* Static exported page (no editing JS) */</script></body></html>`;
-  const blob = new Blob([doc], {type:'text/html'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); a.href = url; a.download='index.html'; a.click(); URL.revokeObjectURL(url);
-}
-
-// Auto-save every 3s
-setInterval(()=>{ persistFromDOM(); saveState(state); }, 3000);
-
-// Expose for console / debugging
-window._semm4zee_z`4s = { state, saveState, loadState };
+  
+Expose for console / debugging
+window._semm4zee_ z`4s TEAM
 
 </script>
 </body>
