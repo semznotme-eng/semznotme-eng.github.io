@@ -269,7 +269,8 @@ a:active{ transform: translateY(1px); }
   }
   nav strong{
   position:relative;
-  padding-left:64px; /* diperkecil biar nggak nabrak */
+  padding-left:72px
+  }
   font-weight:700;
   letter-spacing:.5px;
   font-size:18px;
@@ -279,16 +280,13 @@ nav strong::before{
   content:"z'sTEAM";
   position:absolute;
   left:0;
-  top:55%; /* turun dikit */
+  top:50%;
   transform:translateY(-50%);
   font-family:'Rubik Glitch','Orbitron',system-ui;
-  font-size:16px;
-  letter-spacing:-.5px;
+  font-size:14px;
   color:#a78bfa;
-  text-shadow:
-    0 0 12px rgba(124,58,237,.9),
-    0 0 26px rgba(56,189,248,.6);
-  white-space:nowrap;
+  opacity:.85;
+  pointer-events:none;
 }
 
 /* UNDERLINE GRAFFITI */
@@ -309,7 +307,29 @@ body::after{
   inset:0;
   background:
     url("https://images.unsplash.com/photo-
-    
+/* ===== FIX NAV TIDAK NUBRUK HERO ===== */
+nav{
+  height:64px;
+  display:flex;
+  align-items:center;
+}
+
+/* dorong hero ke bawah nav */
+.hero{
+  padding-top:80px;
+  }
+/* ===== FIX NAV TIDAK NUBRUK HERO ===== */
+nav{
+  height:64px;
+  display:flex;
+  align-items:center;
+}
+
+/* dorong hero ke bawah nav */
+.hero{
+  padding-top:80px;
+}
+  
 /*  
 body{margin:0;font-family:Inter,system-ui;background:radial-gradient(circle at top,#1e1b4b,#020617);color:#e5e7eb}
 nav{position:sticky;top:0;background:rgba(2,6,23,.8);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;z-index:10} */
