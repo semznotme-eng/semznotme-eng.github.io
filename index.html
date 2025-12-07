@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>semm4zee — Portfolio z`4sem</title>
-<style>.project p {
+<style>.@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Orbitron:wght@600;700&display=swap');
+  
+  project p {
   line-height: 1.8;
   margin-bottom: 14px;
 }
@@ -265,9 +267,46 @@ a:active{ transform: translateY(1px); }
 @media (prefers-reduced-motion: no-preference){
   html{ scroll-behavior:smooth }
   }
-                                          
+  /* ===== Z'sTEAM LOGO (CSS ONLY / KING MODE) ===== */
+nav strong{
+  position:relative;
+  padding-left:96px; /* ruang logo */
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+/* LOGO TEXT */
+nav strong::before{
+  content:"z’sTEAM";
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:'Rubik Glitch','Orbitron',system-ui;
+  font-size:18px;
+  letter-spacing:-.5px;
+  color:#a78bfa;
+  text-shadow:
+    0 0 12px rgba(124,58,237,.9),
+    0 0 26px rgba(56,189,248,.6);
+  white-space:nowrap;
+}
+
+/* UNDERLINE GRAFFITI */
+nav strong::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:78px;
+  height:3px;
+  background:linear-gradient(90deg,#7c3aed,#38bdf8,#7c3aed);
+  border-radius:3px;
+  box-shadow:0 0 14px rgba(124,58,237,.8);
+}
+/*  
 body{margin:0;font-family:Inter,system-ui;background:radial-gradient(circle at top,#1e1b4b,#020617);color:#e5e7eb}
-nav{position:sticky;top:0;background:rgba(2,6,23,.8);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;z-index:10}
+nav{position:sticky;top:0;background:rgba(2,6,23,.8);backdrop-filter:blur(10px);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;z-index:10} */
 nav a{color:#a5b4fc;text-decoration:none;margin-left:18px;font-weight:600}
 section{max-width:1100px;margin:80px auto;padding:0 24px}
 .hero h1{font-size:3rem;margin:0}
