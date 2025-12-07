@@ -174,7 +174,9 @@ p {
 nav a {
   position: relative;
 }
-
+nav{
+  flex-wrap: nowrap;
+  }
 nav a::after {
   content: "";
   position: absolute;
@@ -361,6 +363,12 @@ nav{
 .hero{
   padding-top: 72px;
   }
+@media (max-width: 480px){
+  nav a{
+    font-size: .85rem;
+    margin-left: 12px;
+  }
+}
 </style>
 </head>
 <body>
