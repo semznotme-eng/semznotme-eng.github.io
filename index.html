@@ -267,23 +267,22 @@ a:active{ transform: translateY(1px); }
 @media (prefers-reduced-motion: no-preference){
   html{ scroll-behavior:smooth }
   }
-  /* ===== Z'sTEAM LOGO (CSS ONLY / KING MODE) ===== */
-nav strong{
+  nav strong{
   position:relative;
-  padding-left:96px; /* ruang logo */
+  padding-left:64px; /* diperkecil biar nggak nabrak */
   font-weight:700;
   letter-spacing:.5px;
-}
+  font-size:18px;
+  }
 
-/* LOGO TEXT */
 nav strong::before{
-  content:"z’sTEAM";
+  content:"z'sTEAM";
   position:absolute;
   left:0;
-  top:50%;
+  top:55%; /* turun dikit */
   transform:translateY(-50%);
   font-family:'Rubik Glitch','Orbitron',system-ui;
-  font-size:18px;
+  font-size:16px;
   letter-spacing:-.5px;
   color:#a78bfa;
   text-shadow:
@@ -316,6 +315,45 @@ section{max-width:1100px;margin:80px auto;padding:0 24px}
 .project{background:rgba(255,255,255,.04);padding:20px;border-radius:14px}
 footer{text-align:center;padding:60px;color:#94a3b8}
 [contenteditable]{outline:none}
+@keyframes neonPulse {
+  0%,100% {
+    text-shadow:
+      0 0 8px rgba(124,58,237,.6),
+      0 0 20px rgba(56,189,248,.4);
+  }
+  50% {
+    text-shadow:
+      0 0 14px rgba(124,58,237,.9),
+      0 0 34px rgba(56,189,248,.8);
+  }
+}
+
+nav strong::before{
+  animation: neonPulse 2.6s ease-in-out infinite;
+  }
+ .hero h1{
+  text-shadow:
+    0 0 20px rgba(124,58,237,.25),
+    0 0 40px rgba(56,189,248,.15);
+ }
+ .project:hover{
+  transform: translateY(-8px) scale(1.015);
+}
+
+.project:hover h3{
+  color:#7c3aed;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(600px at 20% 10%, rgba(124,58,237,.10), transparent),
+    radial-gradient(600px at 80% 90%, rgba(56,189,248,.10), transparent);
+  pointer-events:none;
+  z-index:-1;
+}
+  
 </style>
 </head>
 <body>
